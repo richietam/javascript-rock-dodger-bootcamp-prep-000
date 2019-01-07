@@ -57,8 +57,8 @@ function checkCollision(rock) {
 function createRock(x) {
   const rock = document.createElement('div')
 
-  rock.className = 'rock'
-  rock.style.left = `${x}px`
+  rock.className = 'rock';
+  rock.style.left = `${x}px`;
 
   // Hmmm, why would we have used `var` here?
   var top = rock.style.top = 0
@@ -82,8 +82,8 @@ function createRock(x) {
      * If a rock collides with the DODGER,
      * we should call endGame()
      */
-     if(checkCollision(rock)==true){
-        return endGame()
+     if(checkCollision(rock)){
+        return endGame();
      }
       if(top < GAME_HEIGHT) {
        window.requestAnimationFrame(moveRock);
